@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "catools1",
+  "description": "Cat-ing edge design for your buildtools1.",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "cookies",
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "browser_action": {
+    "default_icon": "good-cat.png"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "jquery.min.js",
+        "cat-content.js"
+      ],
+      "matches": [
+        "https://buildtools1.service-now.com/*"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "jquery.min.js",
+      "cat-click.js"
+    ],
+    "persistent": false
+  }
+}
